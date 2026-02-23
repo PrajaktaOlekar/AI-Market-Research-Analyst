@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Market Research Analyst</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🤖 AI Market Research Analyst</h1>
+                <p>Intelligent Business Report Analysis using Gemini AI</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-card">
+                    <h2>Upload Business Report</h2>
+                    <div class="upload-area" id="uploadArea">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <p class="upload-text">Drag and drop your PDF here or click to select</p>
+                        <input type="file" id="fileInput" accept=".pdf" style="display: none;">
+                    </div>
+                    <button class="btn btn-primary" id="analyzeBtn" disabled>
+                        <span id="btnText">Select PDF to Analyze</span>
+                        <span id="spinner" class="spinner" style="display: none;"></span>
+                    </button>
+                    <div id="fileInfo" class="file-info" style="display: none;"></div>
+                </div>
+
+                <!-- Sample Data Button -->
+                <div class="sample-section">
+                    <p>Or try with sample data:</p>
+                    <button class="btn btn-secondary" id="sampleBtn">Load Sample Analysis</button>
+                </div>
+            </section>
+
+            <!-- Analysis Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <button class="btn btn-small" id="newAnalysisBtn">New Analysis</button>
+                </div>
+
+                <!-- Current Business Situation -->
+                <div class="result-card">
+                    <h3>📊 Current Business Situation</h3>
+                    <p id="currentSituation" class="result-text"></p>
+                </div>
+
+                <!-- Strong Points -->
+                <div class="result-card">
+                    <h3>💪 Strong Points</h3>
+                    <div id="strongPointsContainer" class="points-container"></div>
+                </div>
+
+                <!-- Weak Points -->
+                <div class="result-card">
+                    <h3>⚠️ Weak Points</h3>
+                    <div id="weakPointsContainer" class="points-container"></div>
+                </div>
+
+                <!-- Suggestions -->
+                <div class="result-card">
+                    <h3>💡 Suggestions for Improvement</h3>
+                    <div id="suggestionsContainer" class="points-container"></div>
+                </div>
+
+                <!-- Strategic Moves -->
+                <div class="result-card">
+                    <h3>🎯 Next Strategic Moves</h3>
+                    <div id="movesContainer" class="points-container"></div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-card">
+                        <h3>Strengths vs Weaknesses</h3>
+                        <canvas id="strengthsChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Analysis Breakdown</h3>
+                        <canvas id="breakdownChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Export Section -->
+                <div class="export-section">
+                    <button class="btn btn-success" id="exportJsonBtn">📥 Export as JSON</button>
+                    <button class="btn btn-success" id="exportCsvBtn">📥 Export as CSV</button>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section id="errorSection" class="error-section" style="display: none;">
+                <div class="error-card">
+                    <h3>❌ Error</h3>
+                    <p id="errorMessage"></p>
+                    <button class="btn btn-secondary" onclick="resetForm()">Try Again</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 AI Market Research Analyst | Powered by Gemini AI</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
