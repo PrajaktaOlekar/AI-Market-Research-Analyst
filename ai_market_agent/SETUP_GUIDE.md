@@ -103,7 +103,7 @@ Navigate to the folder and check for:
 
 ### Example `.env` Content:
 ```
-GEMINI_API_KEY=AIzaSyD_BjA7X9z8Y_mQ1R2S3T4U5V6W7X8Y9Z0
+GEMINI_API_KEY=your_api_key_here
 FLASK_ENV=development
 DEBUG=True
 ```
