@@ -1,6 +1,6 @@
 # AI Market Research Analyst
 
-A simple, functional AI-based software for analyzing business reports using the Antigravity framework and Google's Gemini API.
+A simple, functional AI-based software for analyzing business reports, built with Python, Flask and the Google Gemini API (developed in Google Antigravity).
 
 ## Overview
 
@@ -200,7 +200,7 @@ Edit `backend/config.py` to customize:
 
 ## Technologies Used
 
-- **Backend:** Flask, Python, Antigravity
+- **Backend:** Python, Flask - **Development Environment:** Google Antigravity
 - **AI/ML:** Google Gemini API
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Charts:** Chart.js
